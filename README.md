@@ -1,6 +1,6 @@
-# 🚀 Google Antigravity Factory: KMP/CMP AI Architect
+# 🚀 Google Antigravity Factory: KMP/CMP AI Architect (Experimental)
 
-Welcome to the **Antigravity Factory**. This repository contains the initialization scripts and skill definitions for a specialized AI Agent designed to bootstrap and manage production-ready **Kotlin Multiplatform (KMP)** and **Compose Multiplatform (CMP)** projects.
+Welcome to the **Google Antigravity Factory**. This repository contains the initialization scripts and skill definitions for a specialized AI Agent designed to bootstrap and manage production-ready **Kotlin Multiplatform (KMP)** and **Compose Multiplatform (CMP)** projects.
 
 This agent is configured to handle the bleeding edge of the Kotlin ecosystem, specifically tailored for **Android, iOS, and WebAssembly (Wasm)** targets, avoiding common compiler pitfalls and ensuring strict architectural standards.
 
@@ -68,3 +68,47 @@ To bootstrap a brand new KMP project from scratch, use the following Master Prom
 
 ## ⚠️ Known WebAssembly Caveats
 When testing the Web target locally (`.\gradlew wasmJsBrowserRun`), if you encounter a blank screen or a `LinkError: WebAssembly.instantiate()`, clear your browser cache (or use Incognito mode) to ensure the Skiko engine re-syncs with your latest compiled binaries.
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions to make the **Antigravity Factory** even smarter! If you have ideas for new skills, prompt optimizations, or bug fixes for newer Kotlin versions, please feel free to contribute:
+
+1. **Fork** the repository.
+2. **Create a new branch** for your feature or fix (`git checkout -b feature/amazing-new-skill`).
+3. **Commit** your changes with clear, descriptive messages (`git commit -m 'Add new skill for SQLDelight setup'`).
+4. **Push** your branch to your fork (`git push origin feature/amazing-new-skill`).
+5. **Open a Pull Request** against the `main` branch of this repository.
+
+Please ensure any new AI skills follow the standard markdown format and include clear, sequential instructions.
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**.
+
+```text
+MIT License
+
+Copyright (c) 2026 Agustin Sivoplas
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
