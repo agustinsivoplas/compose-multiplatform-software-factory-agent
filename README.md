@@ -34,10 +34,10 @@ The agent is divided into 12 highly specialized skills. When prompting the AI, y
 
 ## ⚙️ Setup & Installation
 
-1. Clone this repository or copy the `setup_antigravity.ps1` script to your desired workspace folder.
+1. Clone this repository or copy the `cmp_software_factory_agent.ps1` script to your desired workspace folder.
 2. Run the PowerShell script:
    ```powershell
-   .\setup_antigravity.ps1
+   .\cmp_software_factory_agent.ps1
    ```
 3. The script will generate a `.agent/skills` directory containing all the Markdown skill files and a `.cursorrules` file with global architectural directives.
 4. Open the folder in your AI-powered IDE (like Cursor) or attach the `.agent` folder to your preferred AI chat interface.
