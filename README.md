@@ -1,4 +1,4 @@
-# 🚀 Antigravity Factory: KMP/CMP AI Architect
+# 🚀 Google Antigravity Factory: KMP/CMP AI Architect
 
 Welcome to the **Antigravity Factory**. This repository contains the initialization scripts and skill definitions for a specialized AI Agent designed to bootstrap and manage production-ready **Kotlin Multiplatform (KMP)** and **Compose Multiplatform (CMP)** projects.
 
@@ -34,7 +34,37 @@ The agent is divided into 12 highly specialized skills. When prompting the AI, y
 
 ## ⚙️ Setup & Installation
 
-1. Clone this repository or copy the `cmp_software_factory_agent.ps1` script to your desired workspace folder.
+1. Clone this repository or copy the `setup_antigravity.ps1` script to your desired workspace folder.
 2. Run the PowerShell script:
    ```powershell
-   .\cmp_software_factory_agent.ps1
+   .\setup_antigravity.ps1
+   ```
+3. The script will generate a `.agent/skills` directory containing all the Markdown skill files and a `.cursorrules` file with global architectural directives.
+4. Open the folder in your AI-powered IDE (like Cursor) or attach the `.agent` folder to your preferred AI chat interface.
+
+---
+
+## 🎯 Example Usage (The Master Prompt)
+
+To bootstrap a brand new KMP project from scratch, use the following Master Prompt. Just replace `[APP_NAME]` and `[PACKAGE_NAME]` with your actual project details:
+
+> Act as my Lead KMP Architect and execute a complete project bootstrap for the app named **'[APP_NAME]'** utilizing the exact Package Name / Bundle ID **'[PACKAGE_NAME]'**, targeting **[Android, iOS, Web]**. 
+> 
+> Strictly follow your skills sequentially: `@cmp-git-setup`, `@cmp-project-setup`, `@cmp-architect`, `@cmp-linter-ktlint`, `@cmp-testing-coverage`, `@cmp-di-koin`, `@cmp-networking`, `@cmp-navigation`, and `@cmp-ui-standard`. 
+> 
+> **CRITICAL CHECKLIST BEFORE YOU WRITE CODE:**
+> 1. Ensure you use the exact Package Name **'[PACKAGE_NAME]'** for the Android `applicationId`, `namespace`, iOS Bundle ID, and the entire Kotlin directory structure.
+> 2. Ensure you use exactly **Gradle 8.12** in the `gradle-wrapper.properties`.
+> 3. Ensure **Kotlin 2.0.21** and apply the `composeCompiler` plugin in both build files. 
+> 4. Use the modern `@file:OptIn(org.jetbrains.kotlin.gradle.ExperimentalWasmDsl::class)` syntax at the top of `composeApp/build.gradle.kts`. Do NOT use the deprecated `.targets.js.dsl.` path.
+> 5. Use the new Android `compilerOptions` syntax inside the `androidTarget` block.
+> 6. **TOML STRUCTURE RULES 🚨:**
+>    - You MUST put `navigation-compose = { module = "org.jetbrains.androidx.navigation:navigation-compose", version.ref = "navigationCompose" }` strictly inside the **`[libraries]`** block. 
+>    - You MUST put `composeCompiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }` strictly inside the **`[plugins]`** block. Do not mix them.
+> 7. Automatically generate the `composeApp/src/wasmJsMain/resources/index.html` file with the exact `<script type="importmap">` configuration specified in your `@cmp-project-setup`.
+> 8. **Navigation Demo:** In your `@cmp-navigation` phase, create a Type-Safe `NavHost` in `App.kt` with two routes (`HomeRoute` and `DetailRoute(val id: Int)`). Add a button on the Home screen that navigates to the Detail screen to prove the setup works.
+> 
+> Please generate all files autonomously. When you are done, let me know so I can verify by running `.\gradlew wasmJsBrowserRun`.
+
+## ⚠️ Known WebAssembly Caveats
+When testing the Web target locally (`.\gradlew wasmJsBrowserRun`), if you encounter a blank screen or a `LinkError: WebAssembly.instantiate()`, clear your browser cache (or use Incognito mode) to ensure the Skiko engine re-syncs with your latest compiled binaries.
