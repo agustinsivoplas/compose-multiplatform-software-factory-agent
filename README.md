@@ -73,7 +73,7 @@ When testing the Web target locally (`.\gradlew wasmJsBrowserRun`), if you encou
 
 ## 🤝 Contributing
 
-We welcome contributions to make the **Antigravity Factory** even smarter! If you have ideas for new skills, prompt optimizations, or bug fixes for newer Kotlin versions, please feel free to contribute:
+We welcome contributions to make the **Google Antigravity Factory** even smarter! If you have ideas for new skills, prompt optimizations, or bug fixes for newer Kotlin versions, please feel free to contribute:
 
 1. **Fork** the repository.
 2. **Create a new branch** for your feature or fix (`git checkout -b feature/amazing-new-skill`).
