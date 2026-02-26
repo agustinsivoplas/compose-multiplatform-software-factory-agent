@@ -34,13 +34,23 @@ The agent is divided into 12 highly specialized skills. When prompting the AI, y
 
 ## ⚙️ Setup & Installation
 
-1. Clone this repository or copy the `cmp_software_factory_agent.ps1` script to your desired workspace folder.
-2. Run the PowerShell script:
-   ```powershell
-   .\cmp_software_factory_agent.ps1
-   ```
-3. The script will generate a `.agent/skills` directory containing all the Markdown skill files and a `.cursorrules` file with global architectural directives.
-4. Open the folder in your AI-powered IDE (like Cursor) or attach the `.agent` folder to your preferred AI chat interface.
+Clone this repository to your desired workspace folder and run the appropriate script for your Operating System:
+
+**For Windows (PowerShell):**
+```powershell
+.\cmp_software_factory_agent.ps1
+```
+
+**For macOS / Linux (Bash):**
+```bash
+# First, make the script executable
+chmod +x cmp_software_factory_agent.sh
+
+# Run the script
+./cmp_software_factory_agent.sh
+```
+
+Once executed, the script will generate a `.agent/skills` directory containing all the Markdown skill files and a `.cursorrules` file with global architectural directives. You can then open the folder in your AI-powered IDE (like Cursor) or attach the `.agent` folder to your preferred AI chat interface.
 
 ---
 
